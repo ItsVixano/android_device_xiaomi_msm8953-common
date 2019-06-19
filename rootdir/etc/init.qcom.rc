@@ -97,6 +97,7 @@ on boot
     chmod 0660 /sys/bus/i2c/devices/3-0038/set_cover_mode
     chown system system /sys/class/touch/sys/mode_cover
     chmod 0660 /sys/class/touch/sys/mode_cover
+    chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
@@ -111,6 +112,7 @@ on boot
     chown system system /sys/kernel/debug/msm_core/ptable
     chown system system /sys/kernel/boot_slpi/ssr
     chown system system /sys/kernel/boot_adsp/ssr
+    chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/module/bluetooth_power/parameters/power
     chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
     chmod 0660 /sys/class/rfkill/rfkill0/state
@@ -369,9 +371,6 @@ on post-fs-data
 
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system system
-
-on property:hw.fm.init=*
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "

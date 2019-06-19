@@ -164,8 +164,9 @@ endif
 
 # FM
 PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
 
 # Gatekeeper
 PRODUCT_PACKAGES += \

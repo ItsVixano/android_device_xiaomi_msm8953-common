@@ -54,9 +54,8 @@ bluetooth.profile.sap.server.enabled?=true
 bluetooth.sco.disable_enhanced_connection=1
 bluetooth.hfp.client=1
 persist.vendor.btstack.enable.splita2dp=false
-qcom.bluetooth.soc=smd
 ro.bluetooth.hfp.ver=1.7
-ro.qualcomm.bt.hci_transport=smd
+vendor.qcom.bluetooth.soc=pronto
 
 # Camera
 camera.display.lmax=1280x720
@@ -113,6 +112,7 @@ persist.qfp=false
 
 # FM
 ro.fm.transmitter=false
+vendor.hw.fm.init=0
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/config
