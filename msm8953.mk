@@ -26,11 +26,20 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
+ifneq ($(filter ysl,$(TARGET_DEVICE)),)
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+else
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+endif
 
 # Boot animation
+ifneq ($(filter ysl,$(TARGET_DEVICE)),)
+TARGET_SCREEN_HEIGHT := 1440
+TARGET_SCREEN_WIDTH := 720
+else
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
+endif
 
 # Permissions
 PRODUCT_COPY_FILES += \
