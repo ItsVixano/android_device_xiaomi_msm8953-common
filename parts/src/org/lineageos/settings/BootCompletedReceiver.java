@@ -24,6 +24,7 @@ import android.util.Log;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
+import org.lineageos.settings.device;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
