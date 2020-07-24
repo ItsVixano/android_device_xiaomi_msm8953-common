@@ -183,12 +183,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     chargeonlymode
 
-#HALS
-PRODUCT_SOONG_NAMESPACES += \
-hardware/qcom/audio \
-hardware/qcom/media \
-hardware/qcom/display
-
 # HW crypto
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
