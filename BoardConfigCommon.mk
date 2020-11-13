@@ -51,8 +51,11 @@ TARGET_KERNEL_VERSION := 4.9
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
+ifeq ($(TARGET_DEVICE), ysl)
+else
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
+endif
 
 # Audio
 AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
