@@ -33,11 +33,20 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
+ifeq ($(TARGET_DEVICE), ysl)
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+else
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+endif
 
 # Boot animation
+ifeq ($(TARGET_DEVICE), ysl)
+TARGET_SCREEN_HEIGHT := 1440
+TARGET_SCREEN_WIDTH := 720
+else
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
+endif
 
 # Permissions
 PRODUCT_COPY_FILES += \

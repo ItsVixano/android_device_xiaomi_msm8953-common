@@ -18,8 +18,6 @@
 
 set -e
 
-INITIAL_COPYRIGHT_YEAR=2017
-
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
@@ -37,7 +35,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers "mido tissot"
+write_headers "sakura daisy ysl"
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt true
