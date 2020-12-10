@@ -109,6 +109,7 @@ ro.vendor.qti.va_aosp.support=1
 
 # Media
 av.debug.disable.pers.cache=1
+debug.media.transcoding.codec_max_operating_rate=120
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 media.aac_51_output_enabled=true
