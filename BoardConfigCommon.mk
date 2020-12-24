@@ -179,13 +179,6 @@ BOARD_USES_QCOM_HARDWARE := true
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
-# Recovery
-ifeq ($(AB_OTA_UPDATER), true)
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/fstab_AB.recovery.qcom
-else
-TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/fstab.recovery.qcom
-endif
-
 # SELinux
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
