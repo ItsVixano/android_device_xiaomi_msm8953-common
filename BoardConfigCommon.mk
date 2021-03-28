@@ -91,6 +91,11 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+ifeq ($(TARGET_KERNEL_VERSION),4.9)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest/manifest_4.9.xml
+else
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest/manifest_3.18.xml
+endif
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # HW crypto
