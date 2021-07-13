@@ -1,4 +1,4 @@
-# daisy package version: daisy-user 10 QKQ1.191002.002 V11.0.20.0.QDLMIXM release-keys, unless stated otherwise
+# daisy package version: daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys, unless stated otherwise
 
 # ADSP - from daisy
 vendor/bin/adsprpcd|a5e878691577485c9f7ee33dfe02384a13f0a265
@@ -681,7 +681,7 @@ vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so|9eb713ce4ffd38006bd0ca
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so|6dbe703a5a8389c342008c950aaec7a3a260a055
 
 # Sensors - from daisy
-vendor/bin/sensors.qti|a0701f889c2af8dd964a8f0300761e91a3748815
+vendor/bin/sensors.qti|fa96c853b27dad6e7547ddc119a0718194626c9e
 vendor/lib/hw/activity_recognition.msm8953.so|1c7334f56182513bddefcb3b655064cca1121e21
 vendor/lib/libsensor1.so|a3bff5966ef0dd0623d385da9a8809f6dabb11f3
 vendor/lib/libsensor_reg.so|8f113416861ab8c14613ebf3ea6eeb9997971624
@@ -720,9 +720,9 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so|aeca80d0859dd1084b4a6585779d79b48ae9aa
 # Widevine - from daisy
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|e130b8f1c8d46d8a185b00cba5ff8a2a871ee94c
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|dee5b7838ac561a2292e89fc0c4ccd1932224215
-vendor/lib/mediadrm/libwvdrmengine.so|248970aba6bd653fda3ce2da5d71e1ee0cea656d|7833a6c74fcf6d034d841ae2bff756c3df3a708c
-vendor/lib64/libwvhidl.so|72ebe6aa5c8f5a681979423149896b3d2201d974|9720fa37d6bfe685ee2d8752f7760a950ba2aef1
-vendor/lib64/mediadrm/libwvdrmengine.so|449c86e23afe6f3f0055e3b2f9af4ecc23afabca|a57e61b2025a9a840b451cb0643a11ad2466c704
+vendor/lib/mediadrm/libwvdrmengine.so|53e578d72fbd6b2f56eed7529c15ec3818656ce3|7d9ff475a4222bdff3dcb349a37bd2cf5403d95a
+vendor/lib64/libwvhidl.so|a701374f4c0a6b6924b3f81c304505db48b3f9e1|6ec146923c800beb8d3473179154ff902f9a6c3f
+vendor/lib64/mediadrm/libwvdrmengine.so|9576cf6a0350a3b6fdc4982cede62c542f257011|86d43d9eb9580f95034f0c18ecd402b89b095a62
 
 # Wi-Fi - from daisy
 vendor/bin/wcnss_service|1a7da5ec11248ea69af665d711a846e4cc7c95be
