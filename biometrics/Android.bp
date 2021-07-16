@@ -4,6 +4,7 @@ cc_binary {
     init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8953.rc"],
     vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8953.xml"],
     vendor: true,
+    compile_multilib: "32",
     relative_install_path: "hw",
     srcs: [
         "BiometricsFingerprint.cpp",
