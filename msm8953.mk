@@ -339,6 +339,7 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     wificond \
     WifiOverlay \
+    wcnss_service \
     wpa_supplicant \
     wpa_supplicant.conf
 
