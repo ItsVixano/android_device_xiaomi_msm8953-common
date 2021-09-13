@@ -109,6 +109,15 @@ vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 
+# ConsumerIR (lirc) - from mido-user 7.0 NRD90M V11.0.2.0.NCFMIXM release-keys
+lib64/hw/consumerir.msm8953.so:vendor/lib64/hw/consumerir.lirc.msm8953.so|6c2c8d4e68038053a8798920f467cbb3e4be599a
+
+# ConsumerIR (peel)
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.peel.msm8953.so
+
+# ConsumerIR (spi) - from onc-user 10 QKQ1.191008.001 V12.5.1.0.QFLCNXM release-keys
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.spi.msm8953.so|7945c6476a3fa04d9cee4fe60e188d342fbb1bfb|dbe0f09e8fb78ee8204c3c2ab43d0fda3a03e91d
+
 # CNE
 etc/cne/Nexus/ATT/ATT_profiles.xml
 etc/cne/Nexus/ROW/ROW_profiles.xml
