@@ -342,6 +342,7 @@ vendor/lib/libllvm-qcom.so
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
+vendor/lib/libtinyxml.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -363,6 +364,7 @@ vendor/lib64/libllvm-qcom.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
+vendor/lib64/libtinyxml.so
 
 # Graphics (SDM)
 vendor/lib/libscalar.so
