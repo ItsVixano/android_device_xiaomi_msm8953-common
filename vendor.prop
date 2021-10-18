@@ -173,5 +173,8 @@ vendor.service.qti.ims.enabled=1
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8953
 
+# System
+persist.sys.binary_xml=false
+
 # Time Services
 persist.timed.enable=true
