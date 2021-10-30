@@ -64,6 +64,15 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        etc/permissions/privapp-permissions-qti.xml)
+            for ANT_PERMISSION in $(grep -L "com.dsi.ant.service.socket" "${2}"); do
+                sed -i 's|</permissions>||s' "${2}"
+                echo '    <privapp-permissions package="com.dsi.ant.service.socket">' >> "${2}"
+                echo '        <permission name="com.dsi.ant.permission.ANTRADIO"/>' >> "${2}"
+                echo '    </privapp-permissions>' >> "${2}"
+                echo '</permissions>' >> "${2}"
+            done
+            ;;
         product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
             sed -i 's/version="2.0"/version="1.0"/g' "${2}"
             ;;
