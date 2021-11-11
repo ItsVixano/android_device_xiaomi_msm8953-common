@@ -84,7 +84,7 @@ function blob_fixup() {
         vendor/lib/mediadrm/libwvdrmengine.so|vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
             ;;
-        vendor/lib64/hw/consumerir.spi.msm8953.so)
+        vendor/lib64/hw/consumerir.spi5.msm8953.so)
             sed -i 's|/dev/spidev6.1|/dev/spidev5.1|' "${2}"
             ;;
         vendor/lib64/libsettings.so)
