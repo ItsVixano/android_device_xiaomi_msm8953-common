@@ -1,62 +1,43 @@
 /*
- * Copyright (C) 2020 The Android Open Source Project
+ * Copyright (C) 2021 The LineageOS Project
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 #pragma once
 
 #include <aidl/android/hardware/light/BnLights.h>
+#include <mutex>
+
+using ::aidl::android::hardware::light::HwLightState;
+using ::aidl::android::hardware::light::HwLight;
 
 namespace aidl {
 namespace android {
 namespace hardware {
 namespace light {
 
-enum led_type {
-    RED,
-    GREEN,
-    BLUE,
-    WHITE,
-};
-
 class Lights : public BnLights {
 public:
     Lights();
 
-    ndk::ScopedAStatus setLightState(int id, const HwLightState& state) override;
-    ndk::ScopedAStatus getLights(std::vector<HwLight>* types) override;
-
+    ndk::ScopedAStatus setLightState(int32_t id, const HwLightState& state) override;
+    ndk::ScopedAStatus getLights(std::vector<HwLight> *_aidl_return) override;
 private:
-    void setSpeakerLightLocked(const HwLightState& state);
-    void handleSpeakerBatteryLocked();
+    void setLED(const HwLightState& state);
 
-    bool setLedBreath(led_type led, uint32_t value);
-    bool setLedBrightness(led_type led, uint32_t value);
+    std::vector<HwLight> mLights;
 
-    bool IsLit(uint32_t color);
-    uint32_t RgbaToBrightness(uint32_t color);
-    bool WriteToFile(const std::string& path, uint32_t content);
+    std::string mBacklightPath;
+    std::vector<std::string> mButtonsPaths;
+    bool mWhiteLED;
 
-    std::string mBacklightNode;
-    bool mButtonExists;
-    bool mWhiteLed;
-    bool mBreath;
-    HwLightState mNotification;
-    HwLightState mBattery;
+    std::mutex mLEDMutex;
+    HwLightState mLastBatteryState;
+    HwLightState mLastNotificationState;
 };
 
-}  // namespace light
-}  // namespace hardware
-}  // namespace android
-}  // namespace aidl
+} // namespace light
+} // namespace hardware
+} // namespace android
+} // namespace aidl

@@ -11,6 +11,8 @@ cc_binary {
     ],
     srcs: [
         "Lights.cpp",
+        "LED.cpp",
+        "Utils.cpp",
         "main.cpp",
     ],
 }
