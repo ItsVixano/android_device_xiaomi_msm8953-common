@@ -27,8 +27,5 @@ LOCAL_MODULE := lights.$(TARGET_BOARD_PLATFORM)
 LOCAL_HEADER_LIBRARIES := libhardware_headers
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
-ifneq (,$(filter tissot,$(TARGET_DEVICE)))
-    LOCAL_CFLAGS += -DWHITE_LED
-endif
 
 include $(BUILD_SHARED_LIBRARY)
