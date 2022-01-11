@@ -356,16 +356,7 @@ vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
-vendor/lib/liblistenjni.so
-vendor/lib/liblistensoundmodel2.so
 vendor/lib/libsmwrapper.so
-vendor/lib64/hw/sound_trigger.primary.msm8953.so
-vendor/lib64/libgcs-calwrapper.so
-vendor/lib64/libgcs-ipc.so
-vendor/lib64/libgcs-osal.so
-vendor/lib64/libgcs.so
-vendor/lib64/liblistenjni.so
-vendor/lib64/liblistensoundmodel2.so
 
 # Media
 vendor/etc/seccomp_policy/mediacodec.policy
@@ -679,10 +670,6 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-
-# Voice
-vendor/lib/vendor.qti.voiceprint@1.0.so
-vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Widevine
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
