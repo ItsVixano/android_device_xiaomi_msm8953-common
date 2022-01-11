@@ -64,9 +64,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
-            sed -i 's/version="2.0"/version="1.0"/g' "${2}"
-            ;;
         product/lib64/libdpmframework.so)
             for LIBSHIM_DPMFRAMEWORK in $(grep -L "libshim_dpmframework.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libshim_dpmframework.so" "${2}"
