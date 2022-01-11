@@ -439,7 +439,6 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Power-off alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
-product/framework/vendor.qti.hardware.alarm-V1.0-java.jar
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
