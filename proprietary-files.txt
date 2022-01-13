@@ -151,6 +151,7 @@ product/etc/permissions/dpmapi.xml
 product/framework/com.qti.dpmframework.jar
 product/framework/dpmapi.jar
 product/lib64/com.qualcomm.qti.dpm.api@1.0.so
+product/lib64/libdiag_system.so
 product/lib64/libdpmctmgr.so
 product/lib64/libdpmfdmgr.so
 product/lib64/libdpmframework.so
@@ -310,9 +311,9 @@ vendor/lib/libsmwrapper.so
 
 # Media
 lib/libFileMux.so
+lib/libOmxMux.so
 lib/libmmosal.so
 lib/libmmparser_lite.so
-lib/libOmxMux.so
 lib64/libmmosal.so
 vendor/etc/seccomp_policy/mediacodec.policy
 vendor/lib/libOmxAacDec.so
