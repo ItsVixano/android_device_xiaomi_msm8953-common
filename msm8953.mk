@@ -379,6 +379,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     libcld80211 \
     libQWiFiSoftApCfg \
+    libwcnss_qmi \
     libwifi-hal-ctrl \
     libwpa_client \
     hostapd \

@@ -1,0 +1,13 @@
+cc_library_shared {
+    name: "libwcnss_qmi",
+    shared_libs: [
+        "libc", 
+        "libcutils",
+        "libutils",
+        "liblog",
+    ],
+    srcs: ["wcnss_qmi.c"],
+    cflags: ["-Wall"],
+    soc_specific: true,
+    vendor: true,
+}
