@@ -3,6 +3,9 @@ genfscon proc  /sys/kernel/boot_reason   u:object_r:proc_boot_reason:s0
 
 # Leds
 genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00/200f000.qcom,spmi:qcom,pm8953@0:qcom,leds@a100 u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8940@3:qcom,haptics@c000/leds/vibrator	u:object_r:sysfs_leds:s0
+# Note: I probably broke it bcz i missed some kernel changes on drivers/power or drivers/leds
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-02/200f000.qcom,spmi:qcom,pmi8940@2:qcom,qpnp-smbcharger/leds u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/78b6000.i2c/i2c-2/2-0045/leds/ u:object_r:sysfs_leds:s0
 
 # Power
@@ -18,6 +21,3 @@ genfscon debugfs /rmt_storage	u:object_r:debugfs_rmt:s0
 # Touchscreen
 genfscon proc /touchpanel	u:object_r:proc_touchpanel:s0
 genfscon sysfs /touchpanel	u:object_r:proc_touchpanel:s0
-
-# Vibrator
-genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8940@3:qcom,haptics@c000/leds/vibrator	u:object_r:sysfs_leds:s0
