@@ -64,9 +64,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
-            sed -i 's/version="2.0"/version="1.0"/g' "${2}"
-            ;;
         system_ext/etc/init/dpmd.rc)
             sed -i "s|/system/product/bin/|/system/system_ext/bin/|g" "${2}"
             ;;
