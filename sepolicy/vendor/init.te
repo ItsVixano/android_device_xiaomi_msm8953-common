@@ -1,4 +1,1 @@
 allow init proc_boot_reason:file r_file_perms;
-
-# Allow init to bind mount over system files
-allow init system_file:file mounton;
