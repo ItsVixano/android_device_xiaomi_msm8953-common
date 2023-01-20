@@ -48,6 +48,7 @@ bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
+bluetooth.sco.disable_enhanced_connection=1
 
 # Bpf
 ro.kernel.ebpf.supported=1
