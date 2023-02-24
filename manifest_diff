@@ -1,0 +1,136 @@
+diff --git a/manifest.xml b/manifest.xml
+index f2a7a297fe..03a55d836a 100644
+--- a/manifest.xml
++++ b/manifest.xml
+@@ -1,4 +1,4 @@
+-<manifest version="2.0" type="device" target-level="3">
++<manifest version="5.0" type="device" target-level="3">
+     <hal format="hidl">
+         <name>android.hardware.audio</name>
+         <transport>hwbinder</transport>
+@@ -44,6 +44,11 @@
+         <transport arch="32+64">passthrough</transport>
+         <fqname>@2.1::IMapper/default</fqname>
+     </hal>
++    <hal format="hidl">
++        <name>android.hardware.health</name>
++        <transport>hwbinder</transport>
++        <fqname>@2.1::IHealth/default</fqname>
++    </hal>
+     <hal format="hidl">
+         <name>android.hardware.ir</name>
+         <transport>hwbinder</transport>
+@@ -73,11 +78,6 @@
+         <fqname>@1.4::IRadio/slot1</fqname>
+         <fqname>@1.4::IRadio/slot2</fqname>
+     </hal>
+-    <hal format="hidl">
+-        <name>android.hardware.radio.config</name>
+-        <transport>hwbinder</transport>
+-        <fqname>@1.1::IRadioConfig/default</fqname>
+-    </hal>
+     <hal format="hidl">
+         <name>android.hardware.sensors</name>
+         <transport>hwbinder</transport>
+@@ -98,11 +98,6 @@
+         <transport>hwbinder</transport>
+         <fqname>@1.0::IOffloadControl/default</fqname>
+     </hal>
+-    <hal format="hidl">
+-        <name>android.hardware.vibrator</name>
+-        <transport>hwbinder</transport>
+-        <fqname>@1.0::IVibrator/default</fqname>
+-    </hal>
+     <hal format="hidl">
+         <name>com.qualcomm.qti.dpm.api</name>
+         <transport>hwbinder</transport>
+@@ -143,6 +138,11 @@
+         <transport>hwbinder</transport>
+         <fqname>@2.2::IFactory/default</fqname>
+     </hal>
++    <hal format="hidl">
++        <name>vendor.qti.esepowermanager</name>
++        <transport>hwbinder</transport>
++        <fqname>@1.1::IEsePowerManager/default</fqname>
++    </hal>
+     <hal format="hidl">
+         <name>vendor.qti.hardware.alarm</name>
+         <transport>hwbinder</transport>
+@@ -164,16 +164,20 @@
+         <fqname>@2.0::IBTConfigStore/default</fqname>
+     </hal>
+     <hal format="hidl">
+-        <name>vendor.qti.hardware.data.connection</name>
++        <name>vendor.qti.hardware.cacert</name>
+         <transport>hwbinder</transport>
+-        <fqname>@1.1::IDataConnection/slot1</fqname>
+-        <fqname>@1.1::IDataConnection/slot2</fqname>
++        <fqname>@1.0::IService/default</fqname>
+     </hal>
+     <hal format="hidl">
+-        <name>vendor.qti.hardware.data.iwlan</name>
++        <name>vendor.qti.hardware.capabilityconfigstore</name>
+         <transport>hwbinder</transport>
+-        <fqname>@1.0::IIWlan/slot1</fqname>
+-        <fqname>@1.0::IIWlan/slot2</fqname>
++        <fqname>@1.0::ICapabilityConfigStore/default</fqname>
++    </hal>
++    <hal format="hidl">
++        <name>vendor.qti.hardware.data.connection</name>
++        <transport>hwbinder</transport>
++        <fqname>@1.1::IDataConnection/slot1</fqname>
++        <fqname>@1.1::IDataConnection/slot2</fqname>
+     </hal>
+     <hal format="hidl">
+         <name>vendor.qti.hardware.data.latency</name>
+@@ -185,6 +189,16 @@
+         <transport>hwbinder</transport>
+         <fqname>@1.0::IDspService/dspservice</fqname>
+     </hal>
++    <hal format="hidl">
++        <name>vendor.qti.hardware.fm</name>
++        <transport>hwbinder</transport>
++        <fqname>@1.0::IFmHci/default</fqname>
++    </hal>
++    <hal format="hidl">
++        <name>vendor.qti.hardware.fstman</name>
++        <transport>hwbinder</transport>
++        <fqname>@1.0::IFstManager/default</fqname>
++    </hal>
+     <hal format="hidl">
+         <name>vendor.qti.hardware.perf</name>
+         <transport>hwbinder</transport>
+@@ -201,15 +215,16 @@
+         <fqname>@1.0::IQSEECom/default</fqname>
+     </hal>
+     <hal format="hidl">
+-        <name>vendor.qti.hardware.radio.am</name>
++        <name>vendor.qti.hardware.qteeconnector</name>
+         <transport>hwbinder</transport>
+-        <fqname>@1.0::IQcRilAudio/slot1</fqname>
+-        <fqname>@1.0::IQcRilAudio/slot2</fqname>
++        <fqname>@1.0::IAppConnector/default</fqname>
++        <fqname>@1.0::IGPAppConnector/default</fqname>
+     </hal>
+     <hal format="hidl">
+-        <name>vendor.qti.hardware.radio.atcmdfwd</name>
++        <name>vendor.qti.hardware.radio.am</name>
+         <transport>hwbinder</transport>
+-        <fqname>@1.0::IAtCmdFwd/AtCmdFwdService</fqname>
++        <fqname>@1.0::IQcRilAudio/slot1</fqname>
++        <fqname>@1.0::IQcRilAudio/slot2</fqname>
+     </hal>
+     <hal format="hidl">
+         <name>vendor.qti.hardware.radio.ims</name>
+@@ -259,6 +274,11 @@
+         <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer0</fqname>
+         <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
+     </hal>
++    <hal format="hidl">
++        <name>vendor.qti.hardware.soter</name>
++        <transport>hwbinder</transport>
++        <fqname>@1.0::ISoter/default</fqname>
++    </hal>
+     <hal format="hidl">
+         <name>vendor.qti.hardware.tui_comm</name>
+         <transport>hwbinder</transport>
