@@ -309,6 +309,11 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+ifndef ($(TARGET_IS_LEGACY),true)
+PRODUCT_PACKAGES += \
+    init.qcril.rc
+endif
+
 PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.post_boot.sh
